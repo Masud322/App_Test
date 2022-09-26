@@ -13,12 +13,11 @@ class NaviBar extends StatefulWidget {
 }
 
 class _NaviBarState extends State<NaviBar> {
-
   @override
   Widget build(BuildContext context) {
     return SafeArea(
         child: Container(
-            height: 57,
+            height: 60,
             decoration: BoxDecoration(
               color: Theme.of(context).primaryColor,
               borderRadius: const BorderRadius.only(
@@ -32,20 +31,13 @@ class _NaviBarState extends State<NaviBar> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   ElevatedButton(
-                      onPressed: () {
-                        
-                      },
-                      // style: ButtonStyle(
-                      //   overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      //     (Set<MaterialState> states) {
-                      //       if (states.contains(MaterialState.hovered))
-                      //         return Colors.blue; //<-- SEE HERE
-                      //       return null; // Defer to the widget's default.
-                      //     },
-                      //   ),
-                      // ),
+                      onPressed: () {},
                       child: IconButton(
-                        color: (widget.pageId == 0 ? Colors.black : (widget.pageId==1?Colors.green:Colors.black)),
+                          color: (widget.pageId == 0
+                              ? Colors.black
+                              : (widget.pageId == 1
+                                  ? Colors.green
+                                  : Colors.black)),
                           onPressed: () {
                             Navigator.push(
                               context,
@@ -55,54 +47,39 @@ class _NaviBarState extends State<NaviBar> {
                           },
                           icon: Icon(Icons.photo_library))),
                   ElevatedButton(
-                    
-                      onPressed: () {
-                        
-                      },
-                      // style: ButtonStyle(
-                      //   overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      //     (Set<MaterialState> states) {
-                      //       if (states.contains(MaterialState.pressed))
-                      //         return Colors.redAccent; //<-- SEE HERE
-                      //       return null; // Defer to the widget's default.
-                      //     },
-                      //   ),
-                      // ),
-                      child: IconButton(
-                        color: (widget.pageId == 0 ? Colors.black : (widget.pageId==2?Colors.green:Colors.black)),
-                          onPressed: () {
-                            Navigator.push(
-                               context,
-                                 MaterialPageRoute(builder: (context) => const CatagoryPage(pageId: 2)));
-                          },
-                          icon: Icon(Icons.category_sharp,))
-                          ),
-                  ElevatedButton(
                       onPressed: () {},
-                      
-                      // style: ButtonStyle(
-                      //   overlayColor: MaterialStateProperty.resolveWith<Color?>(
-                      //     (Set<MaterialState> states) {
-                      //       if (states.contains(MaterialState.hovered))
-                      //         return Colors.green; //<-- SEE HERE
-                      //       return null; // Defer to the widget's default.
-                      //     },
-                      //   ),
-                      // ),
                       child: IconButton(
-                        color: (widget.pageId == 0 ? Colors.black : (widget.pageId==3?Colors.green:Colors.black)),
+                          color: (widget.pageId == 0
+                              ? Colors.black
+                              : (widget.pageId == 2
+                                  ? Colors.green
+                                  : Colors.black)),
                           onPressed: () {
                             Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const Favorite_1()),
-                            );
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        const CatagoryPage(pageId: 2)));
                           },
-                          icon: Icon(Icons.favorite),
-                          
-                          ),
-                          
-                          ),
+                          icon: Icon(
+                            Icons.category_sharp,
+                          ))),
+                  ElevatedButton(
+                    onPressed: () {},
+                    child: IconButton(
+                      color: (widget.pageId == 0
+                          ? Colors.black
+                          : (widget.pageId == 3 ? Colors.green : Colors.black)),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const Favorite_1()),
+                        );
+                      },
+                      icon: Icon(Icons.favorite),
+                    ),
+                  ),
                 ],
               ),
             )));

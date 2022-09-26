@@ -195,7 +195,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ), 
-      bottomNavigationBar: const NaviBar(pageId: 4),
+      bottomNavigationBar: const NaviBar(pageId: 2),
     );
         
   }
