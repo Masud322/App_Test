@@ -143,7 +143,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             Navigator.push(
                  context,
-                   MaterialPageRoute(builder: (context) => const CatagoryPage()),
+                   MaterialPageRoute(builder: (context) => const CatagoryPage(pageId: 4)),
                    
                    );
           },
@@ -224,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ), 
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: const NaviBar(pageId: 4),
     );
         
   }

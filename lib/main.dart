@@ -773,7 +773,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: const NaviBar(pageId: 1,),
     );
   }
 }

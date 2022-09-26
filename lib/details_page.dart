@@ -120,7 +120,7 @@ _save({required String url}) async {
         ),
       ),
       
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: const NaviBar(pageId: 4),
     );
   }
 

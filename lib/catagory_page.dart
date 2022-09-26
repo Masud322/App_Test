@@ -14,12 +14,13 @@ import 'package:flutter/material.dart';
 import 'navibar.dart';
 
 void main() {
-  runApp(const CatagoryPage());
+  runApp(const CatagoryPage(pageId: 2));
 }
 
 // ignore: camel_case_types
 class CatagoryPage extends StatelessWidget {
-  const CatagoryPage({Key? key}) : super(key: key);
+  const CatagoryPage({Key? key, required this.pageId}) : super(key: key);
+  final int pageId;
 
   @override
   Widget build(BuildContext context) {
@@ -373,7 +374,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
       )),
-      bottomNavigationBar: const NaviBar(),
+      bottomNavigationBar: const NaviBar(pageId: 2),
+      
     );
   }
 }
