@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/75.jpg',
-    title: 'New York',
+    title: 'DOWNLODE NOW',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/074.jpg',

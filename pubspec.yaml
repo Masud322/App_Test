@@ -39,6 +39,8 @@ dependencies:
   image_gallery_saver: ^1.7.1
   permission_handler: ^10.0.1
   fluttertoast: ^8.0.9
+  favorite_button: ^0.0.4
+  any_animated_button: ^0.0.3
 
 dev_dependencies:
   flutter_test:

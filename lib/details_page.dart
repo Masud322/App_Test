@@ -1,10 +1,13 @@
 import 'package:dio/dio.dart';
+import 'package:favorite_button/favorite_button.dart';
+import 'package:first_flutter_app/favorite.dart';
 import 'package:first_flutter_app/navibar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
 import 'package:permission_handler/permission_handler.dart';
+
 
 
 class DetailsPage extends StatefulWidget {
@@ -24,7 +27,7 @@ class DetailsPage extends StatefulWidget {
 }
 
 class _DetailsPageState extends State<DetailsPage> {
-
+final List<String> _isFavorite=[];
 
   bool _hasBeenPressed = false;
   
@@ -98,18 +101,34 @@ _save({required String url}) async {
                 const Padding(padding:EdgeInsets.all(5)),
                 Container(
                   
-                  decoration: BoxDecoration(
-                    color: Colors.black.withOpacity(0.5),
-                  ),
-                  child: IconButton(icon: const Icon(Icons.favorite_sharp,size: 35),
-                  //color: Colors.white,
-                  color: _hasBeenPressed ? const Color.fromARGB(255, 255, 17, 1) : Colors.white,
-                  onPressed: () => {
-                setState(() {
-                  _hasBeenPressed = !_hasBeenPressed;
-                })
-              },
-                  )
+                  child: FavoriteButton(
+                isFavorite: false,
+                
+                // iconDisabledColor: Colors.white,
+                valueChanged: (_isFavorite) {
+                  print('Is Favorite : $_isFavorite');
+                  setState(() {
+                    Favorite_1.addImage(imgPath: widget.imagePath);
+                  });
+                  
+                },
+                
+              ),
+      
+                  // decoration: BoxDecoration(
+                  //   color: Colors.black.withOpacity(0.5),
+                  // ),
+              //     child: IconButton(icon: const Icon(Icons.favorite,size: 35),
+              //     //color: Colors.white,
+              //     color: _hasBeenPressed ? const Color.fromARGB(255, 255, 17, 1) : Colors.white,
+              //     onPressed: () => {
+              //   setState(() {
+              //     _hasBeenPressed = !_hasBeenPressed;
+              //     FavoriteButton(valueChanged: valueChanged)
+
+              //   }),
+              // },
+              //     )
                 ),
               ],
             ),
