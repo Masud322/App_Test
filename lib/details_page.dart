@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:favorite_button/favorite_button.dart';
-import 'package:first_flutter_app/favorite.dart';
+// import 'package:first_flutter_app/favorite.dart';
+import 'utility/favList.dart';
 import 'package:first_flutter_app/navibar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -102,13 +103,13 @@ _save({required String url}) async {
                 Container(
                   
                   child: FavoriteButton(
-                isFavorite: false,
+                isFavorite: FavList.checkList(imagePath: widget.imagePath),
                 
                 // iconDisabledColor: Colors.white,
                 valueChanged: (_isFavorite) {
                   print('Is Favorite : $_isFavorite');
                   setState(() {
-                    Favorite_1.addImage(imgPath: widget.imagePath);
+                    FavList.addImagetoFav(imagePath: widget.imagePath);
                   });
                   
                 },

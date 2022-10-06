@@ -60,7 +60,7 @@ class _AppDrawerState extends State<AppDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Favorite_1()),
+                MaterialPageRoute(builder: (context) => const Favorite_1(pageId: 3,)),
               );
             },
           ),

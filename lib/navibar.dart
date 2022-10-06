@@ -74,7 +74,7 @@ class _NaviBarState extends State<NaviBar> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const Favorite_1()),
+                              builder: (context) => const Favorite_1(pageId: 3,)),
                         );
                       },
                       icon: Icon(Icons.favorite),
