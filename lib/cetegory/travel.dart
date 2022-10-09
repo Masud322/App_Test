@@ -34,71 +34,101 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/121.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/122.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/123.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/124.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/125.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/126.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/127.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
     title: 'New York',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/128.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/129.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/130.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/132.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/133.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/134.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/135.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/136.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Travel',
+    title: 'Free Download',
 
   ),
   
@@ -168,8 +198,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _images[index].imagePath,
+                              details: _images[index].details,
+                              price: _images[index].price,
                               title: _images[index].title,
                               index: index,
+                              id:0,
                             ),
                           ),
                         );
@@ -202,10 +235,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 class ImageDetails {
   final String imagePath;
+  final String price;
+  final String details;
 final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
     
   });

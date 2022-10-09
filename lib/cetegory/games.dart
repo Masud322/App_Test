@@ -34,71 +34,101 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/80.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/79.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/78.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/77.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/76.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/075.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/75.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/074.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/74.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/073.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/73.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/072.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/72.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/071.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/games/71.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Game',
+    title: 'Free Download',
 
   ),
   
@@ -168,8 +198,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _images[index].imagePath,
+                              details: _images[index].details,
+                              price: _images[index].price,
                               title: _images[index].title,
                               index: index,
+                              id:0,
                             ),
                           ),
                         );
@@ -202,10 +235,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 class ImageDetails {
   final String imagePath;
+  final String price;
+  final String details;
 final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
     
   });

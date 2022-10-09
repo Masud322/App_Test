@@ -34,71 +34,101 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/51.jpeg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/051.jpeg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/52.jpeg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/052.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/53.jpeg',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/053.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/54.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
     title: 'New York',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/55.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/055.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/56.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/57.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/58.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/59.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/60.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/car/052.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Car',
+    title: 'Free Download',
 
   ),
   
@@ -168,8 +198,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _images[index].imagePath,
+                              details: _images[index].details,
+                              price: _images[index].price,
                               title: _images[index].title,
                               index: index,
+                              id:0,
                             ),
                           ),
                         );
@@ -202,10 +235,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 class ImageDetails {
   final String imagePath;
+  final String price;
+  final String details;
 final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
     
   });

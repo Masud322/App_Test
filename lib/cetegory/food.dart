@@ -34,70 +34,100 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/61.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/061.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/62.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/062.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/63.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
 
-    title: 'DOWNLODE NOW',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/063.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/64.jpg',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
     title: 'New York',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/064.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/65.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/065.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/66.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/67.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/68.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/69.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/70.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$20.00',
+    details: 'Category: Animal',
+    title: 'Free Download',
 
   ),
   
@@ -167,8 +197,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _images[index].imagePath,
+                              details: _images[index].details,
+                              price: _images[index].price,
                               title: _images[index].title,
                               index: index,
+                              id:0,
                             ),
                           ),
                         );
@@ -201,10 +234,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 class ImageDetails {
   final String imagePath;
+  final String price;
+  final String details;
 final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
     
   });

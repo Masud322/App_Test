@@ -34,71 +34,99 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/abstract/1.jpg',
-    title: 'DOWNLODE NOW',
+    price: 'Price: \$00.00',
+    details: 'Category: Abstract',
+    title: 'Free Download',
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/2.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/2.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/16.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/16.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/4.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/4.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/5.jpg',
-
-    title: 'DOWNLODE NOW',
-
-  ),
-  ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/6.jpg',
-
-    title: 'DOWNLODE NOW',
-  ),
-  ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/7.jpg',
-    title: 'New York',
-  ),
-  ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/8.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/5.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
 
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/9.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/6.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
+  ),
+  ImageDetails(
+    imagePath: 'https://muzahidul190.com/masud/abstract/7.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
+  ),
+  ImageDetails(
+    imagePath: 'https://muzahidul190.com/masud/abstract/8.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
 
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/17.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/9.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
 
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/11.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/17.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
+
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/12.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/11.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
+  ),
+  ImageDetails(
+    imagePath: 'https://muzahidul190.com/masud/abstract/12.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
  
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/13.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/13.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
 
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/14.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/14.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
   ),
   ImageDetails(
-    imagePath: 'https://muzahidul190.com/masud/abstract/18.jpg',
-    title: 'DOWNLODE NOW',
+    imagePath: 'https://muzahidul190.com/masud/abstract/18.jpg', 
+    price: 'Price: \$20.00',    
+    details: 'Category: Abstract',
+    title: 'Free Download',
 
   ),
   
@@ -168,8 +196,11 @@ class _MyHomePageState extends State<MyHomePage> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _images[index].imagePath,
+                              details: _images[index].details,
+                              price: _images[index].price,
                               title: _images[index].title,
                               index: index,
+                              id: 0,
                             ),
                           ),
                         );
@@ -202,10 +233,14 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 class ImageDetails {
   final String imagePath;
-final String title;
+  final String price;
+  final String details;
+  final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
     
   });

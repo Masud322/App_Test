@@ -75,17 +75,21 @@ class _MyHomePageState extends State<MyHomePage> {
             Padding(
               padding: const EdgeInsets.only(left: 32, right: 32, top: 10),
               child: TextField(
+                // onTap: () {
+                //   showSearch(context: context, delegate: CustomSearchDelegate());
+                // },
                 decoration: InputDecoration(
                     border: const OutlineInputBorder(),
                     hintText: 'Search your favorite photos',
                     suffixIcon: TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                      },
                       child: const Text(
                         'Enter',
                         style: TextStyle(fontSize: 18, color: Colors.black),
                       ),
-                    )),
-                onChanged: ((value) {}),
+                    )
+                    ),
               ),
             ),
             const SizedBox(
@@ -134,8 +138,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         MaterialPageRoute(
                           builder: (context) => DetailsPage(
                             imagePath: _images[index].imagePath,
+                            details: _images[index].details,
+                            price: _images[index].price,
                             title: _images[index].title,
                             index: index,
+                            id:1,
                           ),
                         ),
                       );
@@ -165,13 +172,76 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
+// class CustomSearchDelegate extends SearchDelegate
+// {
+//   List<String> searchTerms = ['Animal','Banana',"Pear","Watermelons","Oranges","Blueberries","Strawberries","Raspberries",];
+
+//   @override
+//   List<Widget> buildActions(BuildContext context) {
+
+//     return[
+//       // IconButton(onPressed: (){
+//       //   query = '';
+//       // }, icon: const Icon(Icons.clear))
+//     ];
+
+
+//   }
+
+//   @override
+//   Widget buildLeading(BuildContext context) {
+//     return IconButton(onPressed: () {
+//       close(context, null);
+//     }, icon: const Icon(Icons.arrow_back));
+//   }
+
+//   @override
+//   Widget buildResults(BuildContext context) {
+//     List<String> matchQuery = [];
+//     for(var fruit in searchTerms)
+//       {
+//         if(fruit.toLowerCase().contains(query.toLowerCase())){
+//           matchQuery.add(fruit);
+//         }
+//       }
+//     return ListView.builder(itemBuilder: (context,index){
+//       var result = matchQuery[index];
+//       return ListTile(title: Text(result),);
+//     },itemCount: matchQuery.length,);
+//   }
+
+//   @override
+//   Widget buildSuggestions(BuildContext context) {
+
+//     List<String> matchQuery = [];
+
+//     for(var fruit in searchTerms)
+//       {
+//         if(fruit.toLowerCase().contains(query.toLowerCase()))
+//           {
+//             matchQuery.add(fruit);
+//           }
+//       }
+
+//     return ListView.builder(itemBuilder: (context,index){
+//       var result = matchQuery[index];
+//       return ListTile(title: Text(result),);
+//     },itemCount: matchQuery.length,);
+//   }
+
+// }
+
 
 class ImageDetails {
   final String imagePath;
+  final String price;
+  final String details;
   final String title;
 
   ImageDetails({
     required this.imagePath,
+    required this.details,
+    required this.price,
     required this.title,
   });
 }

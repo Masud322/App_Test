@@ -23,7 +23,7 @@ class Favorite_1 extends StatefulWidget {
 }
 
 class _Favorite_1State extends State<Favorite_1> {
-  
+  final _images = Images.normalImages();
   List<String>? _favList;
   double check = 25;
   
@@ -60,11 +60,7 @@ class _Favorite_1State extends State<Favorite_1> {
           leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
-            Navigator.push(
-                 context,
-                   MaterialPageRoute(builder: (context) => const CatagoryPage(pageId: 4)),
-                   
-                   );
+            Navigator.pop(context);
           },
         ), 
         ),
@@ -94,7 +90,7 @@ class _Favorite_1State extends State<Favorite_1> {
             ),
             Expanded(
               child: Container(
-                margin: EdgeInsets.only(left: 12,right: 12),
+                margin: const EdgeInsets.only(left: 12,right: 12),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 2,
                   vertical: 2,
@@ -120,8 +116,11 @@ class _Favorite_1State extends State<Favorite_1> {
                           MaterialPageRoute(
                             builder: (context) => DetailsPage(
                               imagePath: _favList![index],
+                              details: _images[index].details,
+                              price: _images[index].price,
                               index: index,
-                              title: 'Favourite Image',
+                              title: 'Download Now',
+                              id:0,
                             ),
                           ),
                         );
@@ -155,4 +154,17 @@ class _Favorite_1State extends State<Favorite_1> {
   static void addImage(String imgPath) {
     
   }
+}
+class ImageDetails {
+  final String imagePath;
+  final String price;
+  final String details;
+  final String title;
+
+  ImageDetails({
+    required this.imagePath,
+    required this.details,
+    required this.price,
+    required this.title,
+  });
 }
