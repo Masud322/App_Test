@@ -28,6 +28,7 @@ class _AppDrawerState extends State<AppDrawer> {
             title: (const Text('Universal Wallpaper')),
             automaticallyImplyLeading: false,
           ),
+          
           ListTile(
             leading: const Icon(
               Icons.home,
@@ -102,9 +103,9 @@ class _AppDrawerState extends State<AppDrawer> {
           ),
           ListTile(
             leading: const Icon(
-              Icons.logout,
+              Icons.login,
             ),
-            title: const Text('Logout'),
+            title: const Text('Login'),
             onTap: () {
               Navigator.push(
                 context,
@@ -112,6 +113,18 @@ class _AppDrawerState extends State<AppDrawer> {
               );
             },
           ),
+          // ListTile(
+          //   leading: const Icon(
+          //     Icons.logout,
+          //   ),
+          //   title: const Text('Logout'),
+          //   onTap: () {
+          //     Navigator.push(
+          //       context,
+          //       MaterialPageRoute(builder: (context) => const LoginPage()),
+          //     );
+          //   },
+          // ),
           Container(
             padding: EdgeInsets.only(top: 30),
             child: Column(

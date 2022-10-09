@@ -1,7 +1,17 @@
 // import 'package:first_flutter_app/details_page.dart';
+
+import 'package:first_flutter_app/cetegory/abstract.dart';
+import 'package:first_flutter_app/cetegory/animals.dart';
+import 'package:first_flutter_app/cetegory/car.dart';
+import 'package:first_flutter_app/cetegory/food.dart';
+import 'package:first_flutter_app/cetegory/games.dart';
+import 'package:first_flutter_app/cetegory/movies.dart';
+import 'package:first_flutter_app/cetegory/nature.dart';
+import 'package:first_flutter_app/cetegory/space.dart';
+import 'package:first_flutter_app/cetegory/sports.dart';
+import 'package:first_flutter_app/cetegory/travel.dart';
 import 'package:first_flutter_app/details_page.dart';
 import 'package:first_flutter_app/drawer.dart';
-import 'package:first_flutter_app/login_page.dart';
 import 'package:flutter/material.dart';
 import 'utility/images.dart';
 
@@ -43,28 +53,13 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: (const Text('Universal Wallpapers')),
         actions: [
-          IconButton(
+           IconButton(
+            icon: Icon(Icons.search),
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LoginPage()),
-              );
-            },
-            icon: const Icon(Icons.login),
-          ),
-          Center(
-              child: TextButton(
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LoginPage()),
-              );
-            },
-            child: const Text(
-              'Sign In',
-              style: TextStyle(color: Colors.black),
-            ),
-          )),
+                showSearch(context: context, delegate: CustomSearchDelegate()); 
+            }
+          )
+          
         ],
       ),
       drawer: const AppDrawer(),
@@ -72,40 +67,21 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Padding(
-              padding: const EdgeInsets.only(left: 32, right: 32, top: 10),
-              child: TextField(
-                // onTap: () {
-                //   showSearch(context: context, delegate: CustomSearchDelegate());
-                // },
-                decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
-                    hintText: 'Search your favorite photos',
-                    suffixIcon: TextButton(
-                      onPressed: () {
-                      },
-                      child: const Text(
-                        'Enter',
-                        style: TextStyle(fontSize: 18, color: Colors.black),
-                      ),
-                    )
-                    ),
-              ),
-            ),
             const SizedBox(
-              height: 5,
+              height: 15,
             ),
+            
             const Text(
-              'All Photos',
+              '.....All Photos Here.....',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 23,
                 fontWeight: FontWeight.w600,
                 color: Colors.black,
               ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(
-              height: 7,
+              height: 15,
             ),
             Expanded(
 
@@ -172,64 +148,140 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-// class CustomSearchDelegate extends SearchDelegate
-// {
-//   List<String> searchTerms = ['Animal','Banana',"Pear","Watermelons","Oranges","Blueberries","Strawberries","Raspberries",];
+class CustomSearchDelegate extends SearchDelegate
+{
+  
+  List<String> searchResult= [
+    'Abstract',
+    'Animal',
+    "Car",
+    "Food",
+    "Games",
+    "Movies",
+    "Nature",
+    "Space",
+    "Sports",
+    "Travel",
+    ];
 
-//   @override
-//   List<Widget> buildActions(BuildContext context) {
+  @override
+  List<Widget> buildActions(BuildContext context) {
 
-//     return[
-//       // IconButton(onPressed: (){
-//       //   query = '';
-//       // }, icon: const Icon(Icons.clear))
-//     ];
+    return[
+      IconButton(onPressed: (){
+        if (query.isEmpty){
+          close(context, null);
+        }
+         else{
+         query = '';
+        }
+        
+      }, icon: const Icon(Icons.clear))
+    ];
 
 
-//   }
+  }
 
-//   @override
-//   Widget buildLeading(BuildContext context) {
-//     return IconButton(onPressed: () {
-//       close(context, null);
-//     }, icon: const Icon(Icons.arrow_back));
-//   }
+  @override
+  Widget buildLeading(BuildContext context) {
+    return IconButton(onPressed: () {
+       close(context, null);
+    }, icon: const Icon(Icons.arrow_back));
+  }
 
-//   @override
-//   Widget buildResults(BuildContext context) {
-//     List<String> matchQuery = [];
-//     for(var fruit in searchTerms)
-//       {
-//         if(fruit.toLowerCase().contains(query.toLowerCase())){
-//           matchQuery.add(fruit);
-//         }
-//       }
-//     return ListView.builder(itemBuilder: (context,index){
-//       var result = matchQuery[index];
-//       return ListTile(title: Text(result),);
-//     },itemCount: matchQuery.length,);
-//   }
+  @override
+  Widget buildResults(BuildContext context) =>Center(
+    child: Text(query,
+    style: const TextStyle(fontSize: 64,fontWeight: FontWeight.bold),),
+  );
+   
+   
+  
 
-//   @override
-//   Widget buildSuggestions(BuildContext context) {
+  @override
+  Widget buildSuggestions(BuildContext context) {
 
-//     List<String> matchQuery = [];
+    List<String> suggestions = searchResult.where((searchResult){
+     final result = searchResult.toLowerCase();
+     final input = query.toLowerCase();
 
-//     for(var fruit in searchTerms)
-//       {
-//         if(fruit.toLowerCase().contains(query.toLowerCase()))
-//           {
-//             matchQuery.add(fruit);
-//           }
-//       }
+     return result.contains(input);
+    }).toList();
 
-//     return ListView.builder(itemBuilder: (context,index){
-//       var result = matchQuery[index];
-//       return ListTile(title: Text(result),);
-//     },itemCount: matchQuery.length,);
-//   }
+    return ListView.builder(
+      itemCount: suggestions.length,
+      itemBuilder: (context,index){
+      final suggestion = suggestions[index];
+      return ListTile(
+        title: Text(suggestion),
+        onTap: () {
+          switch (index){
+            case 0:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AbstractPage()),
+              );
+              break;
+              case 1:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const AnimalPage()),
+              );
+              break;
+              case 2:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const CarPage()),
+              );
+              break;
+              case 3:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const FoodPage()),
+              );
+              break;
+              case 4:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const GamesPage()),
+              );
+              break;
+              case 5:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const MoviePage()),
+              );
+              break;
+              case 6:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const NaturePage()),
+              );
+              break;
+              case 7:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SpacePage()),
+              );
+              break;
+              case 8:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SportsPage()),
+              );
+              break;
+              case 9:
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const TravelPage()),
+              );
+          }
+        },
+      );
+    },);
+  }
 
-// }
+}
 
 
 class ImageDetails {
