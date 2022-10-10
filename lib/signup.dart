@@ -16,7 +16,7 @@ class _SignUp_1State extends State<SignUp_1> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: const Text("Sign Up"),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -31,6 +31,18 @@ class _SignUp_1State extends State<SignUp_1> {
                     Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
+                        const SizedBox(
+                          height: 20,
+                        ),
+                        const Padding(
+                      padding: EdgeInsets.only(right: 70),
+                      
+                      child: Text('Universal',style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.green),),
+                    ),
+                    const Text('Wallpapers',style: TextStyle(fontSize: 33,fontWeight: FontWeight.bold,color: Colors.red),),
+                        const SizedBox(
+                          height: 35,
+                        ),
                         const Text(
                           "Sign up",
                           style: TextStyle(

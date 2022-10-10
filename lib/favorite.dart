@@ -64,7 +64,7 @@ class _Favorite_1State extends State<Favorite_1> {
           },
         ), 
         ),
-        backgroundColor: Colors.lightGreenAccent,
+        backgroundColor: Color.fromARGB(255, 154, 248, 47),
         body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,

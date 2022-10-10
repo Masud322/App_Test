@@ -15,21 +15,28 @@ class _AboutPageState extends State<AboutPage> {
         appBar: AppBar(
           title: (const Text('Universal Wallpaper')),
         ),
-        body: Center(
+        body:
+        Center(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
           children:[
+            const SizedBox(
+              height: 90,
+            ),
            Container(
-            margin: EdgeInsets.only(bottom: 50),
+            height: 120,
+            width: 300,
+            child: Image.asset('assets/images/logo.jpg',fit: BoxFit.cover,),
+            
+           ),
+           const SizedBox(
             height: 100,
-            width: 150,
-            child: Image.asset('assets/images/2.jpg'),
            ),
             
             Container(
+              height: 100,
+              width: 250,
               padding: const EdgeInsets.all(16.0),
-              margin: EdgeInsets.only(bottom: 160),
+              margin: const EdgeInsets.only(bottom: 160),
               decoration: BoxDecoration(
                 border: Border.all(width: 3,color: Colors.black),
               ),

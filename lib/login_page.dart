@@ -17,18 +17,31 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: const Text("Login Page"),
       ),
-      body: SizedBox(
+      body: SingleChildScrollView(
+      child: SizedBox(
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Column(
               children: [
                 Column(
                   children: [
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(right: 70),
+                      
+                      child: Text('Universal',style: TextStyle(fontSize: 23,fontWeight: FontWeight.bold,color: Colors.green),),
+                    ),
+                    const Text('Wallpapers',style: TextStyle(fontSize: 33,fontWeight: FontWeight.bold,color: Colors.red),),
+                    const SizedBox(
+                      height: 75,
+                    ),
                     const Text(
                       "Login",
                       style: TextStyle(
@@ -113,6 +126,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ],
         ),
+      ),
       ),
     );
   }
