@@ -43,7 +43,15 @@ class _AppDrawerState extends State<AppDrawer> {
         padding: EdgeInsets.zero,
         children: [
           AppBar(
-            title: (const Text('Universal Wallpaper')),
+            title:Row(
+          children: const [
+            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            SizedBox(
+              width: 5,
+            ),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+          ],
+        ),
             automaticallyImplyLeading: false,
           ),
           ListTile(

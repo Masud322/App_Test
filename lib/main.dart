@@ -54,7 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 154, 248, 47),
       appBar: AppBar(
-        title: (const Text('Universal Wallpapers')),
+        title:Row(
+          children: const [
+            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            SizedBox(
+              width: 5,
+            ),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+          ],
+        ),
         actions: [
            IconButton(
             icon: Icon(Icons.search),

@@ -56,7 +56,15 @@ class _Favorite_1State extends State<Favorite_1> {
       home: Scaffold(
         appBar: AppBar(
           
-          title: (const Text('Universal Wallpaper')), 
+          title:Row(
+          children: const [
+            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            SizedBox(
+              width: 5,
+            ),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+          ],
+        ),
           leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {

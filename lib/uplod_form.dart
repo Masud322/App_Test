@@ -11,7 +11,15 @@ class _Uplode_Form_PageState extends State<Uplode_Form_Page> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: (const Text('Universal Wallpaper')),
+        title:Row(
+          children: const [
+            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            SizedBox(
+              width: 5,
+            ),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+          ],
+        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
