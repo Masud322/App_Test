@@ -146,7 +146,7 @@ class _Buy_PageState extends State<Buy_Page> {
                 );
                   }
                   else
-                    showDialog(context: context, builder: (context) => Alart_Page(context: context)
+                    showDialog(context: context, builder: (context) => Card_Page(context: context)
                    );
                   
                 },
@@ -158,15 +158,15 @@ class _Buy_PageState extends State<Buy_Page> {
     );
   }
 }
-class Alart_Page extends StatefulWidget {
-  const Alart_Page({super.key, required this.context});
+class Card_Page extends StatefulWidget {
+  const Card_Page({super.key, required this.context});
   final BuildContext context;
 
   @override
-  State<Alart_Page> createState() => _Alart_PageState();
+  State<Card_Page> createState() => _Card_PageState();
 }
 
-class _Alart_PageState extends State<Alart_Page> {
+class _Card_PageState extends State<Card_Page> {
   @override
   Widget build(BuildContext context) {
     return const Card(

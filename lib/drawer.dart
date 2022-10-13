@@ -6,10 +6,13 @@ import 'package:first_flutter_app/about_page.dart';
 import 'package:first_flutter_app/catagory_page.dart';
 import 'package:first_flutter_app/favorite.dart';
 import 'package:first_flutter_app/firebase/login.dart';
+import 'package:first_flutter_app/firebase/widget.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:first_flutter_app/privacy_page.dart';
 import 'package:first_flutter_app/firebase/signin.dart';
+import 'package:first_flutter_app/uplod_form.dart';
 import 'package:flutter/material.dart';
+import 'package:first_flutter_app/uplod_form.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -101,11 +104,20 @@ class _AppDrawerState extends State<AppDrawer> {
             ),
             title: const Text('Add Your Photos'),
             onTap: () {
-              Navigator.push(
+                  if (user == null){
+                    Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Signin()),
+                );
+                  }
+                  else {
+                    Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Signin()),
+                MaterialPageRoute(builder: (context) => const Uplode_Form_Page()),
               );
-            },
+                  }
+                  
+                },
           ),
           ListTile(
             leading: const Icon(
@@ -137,7 +149,7 @@ class _AppDrawerState extends State<AppDrawer> {
               leading: const Icon(
                 Icons.logout,
               ),
-              title: const Text('Lugout'),
+              title: const Text('Logout'),
               onTap: () async {
                 try {
                   await _auth.signOut().then(
