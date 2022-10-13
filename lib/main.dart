@@ -1,5 +1,6 @@
 // import 'package:first_flutter_app/details_page.dart';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:first_flutter_app/cetegory/abstract.dart';
 import 'package:first_flutter_app/cetegory/animals.dart';
 import 'package:first_flutter_app/cetegory/car.dart';
@@ -17,7 +18,9 @@ import 'utility/images.dart';
 
 import 'navibar.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp()); 
 }
 
@@ -117,8 +120,8 @@ class _MyHomePageState extends State<MyHomePage> {
                             details: _images[index].details,
                             price: _images[index].price,
                             title: _images[index].title,
+                            id: _images[index].id,
                             index: index,
-                            id:1,
                           ),
                         ),
                       );

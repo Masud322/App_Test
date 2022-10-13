@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "332018922646",
+    "project_id": "wallpaperproject-d0eac",
+    "storage_bucket": "wallpaperproject-d0eac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:332018922646:android:db3a6d269ff52c81563eb7",
+        "android_client_info": {
+          "package_name": "com.example.uw_wallpaper"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "332018922646-3kjk51pem8jqjsk7ea4lqscj84vgttch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJFSL9hG1fjpKRRmLBEH5XFeC6oxSNz-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "332018922646-3kjk51pem8jqjsk7ea4lqscj84vgttch.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

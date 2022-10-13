@@ -34,101 +34,115 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/001.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/002.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/003.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/004.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/005.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
 
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/101.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Space',
-
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/102.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'New York',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/103.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/104.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/105.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/106.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/107.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/108.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/109.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/space/110.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Space',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   
@@ -202,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               price: _images[index].price,
                               title: _images[index].title,
                               index: index,
-                              id:0,
+                              id: _images[index].id,
                             ),
                           ),
                         );
@@ -237,13 +251,14 @@ class ImageDetails {
   final String imagePath;
   final String price;
   final String details;
-final String title;
+  final String title;
+  final int id;
 
   ImageDetails({
     required this.imagePath,
     required this.details,
     required this.price,
     required this.title,
-    
+    required this.id,
   });
 }

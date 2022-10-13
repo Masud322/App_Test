@@ -34,101 +34,115 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/121.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/122.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/123.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/124.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/125.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
 
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/126.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/127.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'New York',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/128.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/129.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/130.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/132.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/133.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/134.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/135.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/travel/136.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Travel',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   
@@ -202,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               price: _images[index].price,
                               title: _images[index].title,
                               index: index,
-                              id:0,
+                              id: _images[index].id,
                             ),
                           ),
                         );
@@ -237,13 +251,15 @@ class ImageDetails {
   final String imagePath;
   final String price;
   final String details;
-final String title;
+  final String title;
+  final int id;
 
   ImageDetails({
     required this.imagePath,
     required this.details,
     required this.price,
     required this.title,
+    required this.id,
     
   });
 }

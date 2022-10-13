@@ -34,140 +34,161 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/21.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/22.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/23.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/24.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/25.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/26.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/27.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'New York',
+    title: 'Downlode Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/28.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/29.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/30.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/31.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/32.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/33.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/34.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/35.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/36.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/41.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/42.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/43.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$15.00',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/44.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/animals/21.jpg',
-    price: 'Price: \$20.00',
+    price: 'Price: \$00.00 / Free for All',
     details: 'Category: Animal',
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   
@@ -241,7 +262,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               price: _images[index].price,
                               title: _images[index].title,
                               index: index,
-                              id:0
+                              id:_images[index].id,
                             ),
                           ),
                         );
@@ -277,12 +298,13 @@ class ImageDetails {
   final String price;
   final String details;
   final String title;
+  final int id;
 
   ImageDetails({
     required this.imagePath,
     required this.details,
     required this.price,
     required this.title,
-    
+    required this.id,
   });
 }

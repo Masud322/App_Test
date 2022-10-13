@@ -34,100 +34,115 @@ class _MyHomePageState extends State<MyHomePage> {
   final List<ImageDetails> _images = [
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/61.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/061.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/62.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/062.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/63.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
 
-    title: 'Free Download',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/063.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/64.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'New York',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/064.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/65.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/065.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/66.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/67.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
  
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/68.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
 
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/69.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$15.00',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 1,
   ),
   ImageDetails(
     imagePath: 'https://muzahidul190.com/masud/food/70.jpg',
-    price: 'Price: \$20.00',
-    details: 'Category: Animal',
-    title: 'Free Download',
+    price: 'Price: \$00.00 / Free for All',
+    details: 'Category: Food',
+    title: 'Download Image',
+    id: 0,
 
   ),
   
@@ -201,7 +216,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               price: _images[index].price,
                               title: _images[index].title,
                               index: index,
-                              id:0,
+                              id: _images[index].id,
                             ),
                           ),
                         );
@@ -236,13 +251,15 @@ class ImageDetails {
   final String imagePath;
   final String price;
   final String details;
-final String title;
+  final String title;
+  final int id;
 
   ImageDetails({
     required this.imagePath,
     required this.details,
     required this.price,
     required this.title,
+    required this.id,
     
   });
 }

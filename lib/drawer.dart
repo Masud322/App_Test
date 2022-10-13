@@ -1,13 +1,21 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:first_flutter_app/about_page.dart';
 import 'package:first_flutter_app/catagory_page.dart';
 import 'package:first_flutter_app/favorite.dart';
-import 'package:first_flutter_app/login_page.dart';
+import 'package:first_flutter_app/firebase/login.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:first_flutter_app/privacy_page.dart';
-import 'package:first_flutter_app/signup.dart';
+import 'package:first_flutter_app/firebase/signin.dart';
 import 'package:flutter/material.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const MyApp());
+}
 
 class AppDrawer extends StatefulWidget {
   const AppDrawer({Key? key}) : super(key: key);
@@ -17,6 +25,13 @@ class AppDrawer extends StatefulWidget {
 }
 
 class _AppDrawerState extends State<AppDrawer> {
+  final _auth = FirebaseAuth.instance;
+  late String email;
+  late String Password;
+
+  final auth = FirebaseAuth.instance;
+  final user = FirebaseAuth.instance.currentUser;
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -28,7 +43,6 @@ class _AppDrawerState extends State<AppDrawer> {
             title: (const Text('Universal Wallpaper')),
             automaticallyImplyLeading: false,
           ),
-          
           ListTile(
             leading: const Icon(
               Icons.home,
@@ -49,7 +63,8 @@ class _AppDrawerState extends State<AppDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const CatagoryPage(pageId: 4)),
+                MaterialPageRoute(
+                    builder: (context) => const CatagoryPage(pageId: 4)),
               );
             },
           ),
@@ -61,7 +76,10 @@ class _AppDrawerState extends State<AppDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const Favorite_1(pageId: 3,)),
+                MaterialPageRoute(
+                    builder: (context) => const Favorite_1(
+                          pageId: 3,
+                        )),
               );
             },
           ),
@@ -85,7 +103,7 @@ class _AppDrawerState extends State<AppDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const SignUp_1()),
+                MaterialPageRoute(builder: (context) => const Signin()),
               );
             },
           ),
@@ -101,58 +119,40 @@ class _AppDrawerState extends State<AppDrawer> {
               );
             },
           ),
-          ListTile(
-            leading: const Icon(
-              Icons.login,
-            ),
-            title: const Text('Login'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const LoginPage()),
-              );
-            },
-          ),
-          // ListTile(
-          //   leading: const Icon(
-          //     Icons.logout,
-          //   ),
-          //   title: const Text('Logout'),
-          //   onTap: () {
-          //     Navigator.push(
-          //       context,
-          //       MaterialPageRoute(builder: (context) => const LoginPage()),
-          //     );
-          //   },
-          // ),
-          Container(
-            padding: EdgeInsets.only(top: 30),
-            child: Column(
-              children: [
-                IconButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const SignUp_1()),
-                    );
-                  },
-                  icon: const Icon(Icons.app_registration_rounded),
-                ),
-                TextButton(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const SignUp_1()),
+          if (user == null)
+            ListTile(
+              leading: const Icon(
+                Icons.login,
+              ),
+              title: const Text('Login / Sign In'),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Signin()),
+                );
+              },
+            )
+          else
+            ListTile(
+              leading: const Icon(
+                Icons.logout,
+              ),
+              title: const Text('Lugout'),
+              onTap: () async {
+                try {
+                  await _auth.signOut().then(
+                        (value) => Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const MyApp()),
+                        ),
                       );
-                    },
-                    child: const Text(
-                      'Register Here',
-                      style: TextStyle(color: Color.fromARGB(255, 0, 140, 255)),
-                    ))
-              ],
-            ),
-          )
+                  print('logout');
+                } catch (e) {
+                  print('Failed $e');
+                }
+              },
+            )
         ],
       ),
     );

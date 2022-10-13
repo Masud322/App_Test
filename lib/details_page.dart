@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:favorite_button/favorite_button.dart';
 import 'package:first_flutter_app/favorite.dart';
+import 'package:first_flutter_app/firebase/widget.dart';
 // import 'package:first_flutter_app/favorite.dart';
 import 'utility/favList.dart';
 import 'package:first_flutter_app/navibar.dart';
@@ -113,23 +114,24 @@ class _DetailsPageState extends State<DetailsPage> {
                           decoration: BoxDecoration(
                             color: Colors.brown.withOpacity(0.5),
                           ),
+                          
                           child: Center(
                             child: ElevatedButton(
                               onPressed: () {
-                               if (widget.id == 0) {
-                                 _save(url: widget.imagePath);
-                               }else{
-                                Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const Favorite_1(pageId: 3,)),
-                        );
 
-                               };
+                                if(widget.id == 0)
+                                {
+                                  _save(url: widget.imagePath);
+                                }
+                                else {
+                                showDialog(context: context, builder: (context) => Buy_Page(context: context)
+                                  );
+                                }
                               },
-                              child: Text(
-                                widget.title,
-                                style: const TextStyle(
+                              
+                              child: const Text(
+                                'Download Image',
+                                style: TextStyle(
                                     color: Colors.black,
                                     fontSize: 20,
                                     fontWeight: FontWeight.bold),

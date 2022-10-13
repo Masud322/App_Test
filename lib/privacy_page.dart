@@ -1,4 +1,3 @@
-import 'package:first_flutter_app/login_page.dart';
 import 'package:flutter/material.dart';
 
 class PrivacyPage extends StatefulWidget {
