@@ -43,7 +43,7 @@ class _PrivacyPageState extends State<PrivacyPage> {
                 children:const [
                   Text("Free Signup for all",style: TextStyle(fontWeight:FontWeight.bold ),),
                 Text("Please don't copy other photos",style: TextStyle(fontWeight:FontWeight.bold ),),
-                Text("Submite your own photo",style: TextStyle(fontWeight:FontWeight.bold ),),
+                Text("Submite your own photo 😊",style: TextStyle(fontWeight:FontWeight.bold ),),
                 ]
                 
               ),
