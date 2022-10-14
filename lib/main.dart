@@ -52,15 +52,15 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 154, 248, 47),
+      backgroundColor: Colors.purple,
       appBar: AppBar(
         title:Row(
           children: const [
-            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
-            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular'),),
           ],
         ),
         actions: [
@@ -85,8 +85,8 @@ class _MyHomePageState extends State<MyHomePage> {
             const Text(
               '.....All Photos Here.....',
               style: TextStyle(
-                fontSize: 23,
-                fontWeight: FontWeight.w600,
+                fontSize: 22,
+                fontFamily: 'Shojumaru-Regular',
                 color: Colors.black,
               ),
               textAlign: TextAlign.center,
@@ -104,7 +104,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 vertical: 2,
               ),
               decoration: const BoxDecoration(
-                color: Colors.white,
+                color: Colors.black,
                 borderRadius: BorderRadius.only(
 
                   //topLeft: Radius.circular(30),

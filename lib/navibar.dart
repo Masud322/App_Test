@@ -36,7 +36,7 @@ class _NaviBarState extends State<NaviBar> {
                           color: (widget.pageId == 0
                               ? Colors.black
                               : (widget.pageId == 1
-                                  ? Colors.green
+                                  ? Colors.purple
                                   : Colors.black)),
                           onPressed: () {
                             Navigator.push(

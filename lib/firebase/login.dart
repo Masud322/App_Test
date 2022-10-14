@@ -32,15 +32,6 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: const [
-            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
-            SizedBox(
-              width: 5,
-            ),
-            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
-          ],
-        ),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
@@ -61,14 +52,14 @@ class _LoginState extends State<Login> {
               const SizedBox(
                 height: 20,
               ),
-              const Padding(padding: EdgeInsets.only(right: 141),
-              child:Text('UNIVARSAL',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.green,),),),
+              const Padding(padding: EdgeInsets.only(right: 185),
+              child:Text('UNIVARSAL',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.indigo,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double),),),
               
-              const Text('WALLPAPERS',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.purpleAccent),),
+              const Text('WALLPAPERS',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.purpleAccent,fontFamily: 'Shojumaru-Regular'),),
               const SizedBox(
                 height: 60,
               ),
-              const Text('LogIn',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.indigo),),
+              const Text('LogIn',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.black),),
               const SizedBox(
                 height: 30,
               ),

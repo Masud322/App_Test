@@ -14,11 +14,11 @@ class _PrivacyPageState extends State<PrivacyPage> {
         appBar: AppBar(
           title:Row(
           children: const [
-            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
-            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular'),),
           ],
         ),
         ),

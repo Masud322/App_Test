@@ -58,11 +58,11 @@ class _Favorite_1State extends State<Favorite_1> {
           
           title:Row(
           children: const [
-            Text('Universal',style: TextStyle(color: Colors.green,fontWeight: FontWeight.bold),),
+            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
-            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold),),
+            Text('Wallpapers',style: TextStyle(color: Colors.purple,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular'),),
           ],
         ),
           leading: IconButton(
@@ -81,11 +81,11 @@ class _Favorite_1State extends State<Favorite_1> {
               height: 15,
             ),
             const Text(
-              '.....Favorite.....',
+              '.....Favorites.....',
               style: TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.w600,
-                color: Colors.black,
+                fontFamily: 'Shojumaru-Regular',
+                color: Colors.indigo,
               ),
               textAlign: TextAlign.center,
             ),
@@ -94,7 +94,7 @@ class _Favorite_1State extends State<Favorite_1> {
             ),
             SizedBox(
               height: check,
-              child: Center(child: Text(check == 25.0 ? 'Favourite List Emplty!' : '')),
+              child: Center(child: Text(check == 25.0 ? 'Favourite List Emplty!' : '',style: TextStyle(fontFamily: 'Shojumaru-Regular',),)),
             ),
             Expanded(
               child: Container(
