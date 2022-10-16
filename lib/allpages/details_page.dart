@@ -1,10 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:favorite_button/favorite_button.dart';
-import 'package:first_flutter_app/favorite.dart';
+import 'package:first_flutter_app/allpages/favorite.dart';
 import 'package:first_flutter_app/firebase/widget.dart';
 // import 'package:first_flutter_app/favorite.dart';
-import 'utility/favList.dart';
-import 'package:first_flutter_app/navibar.dart';
+import '../utility/favList.dart';
+import 'package:first_flutter_app/utility/navibar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -53,7 +53,7 @@ class _DetailsPageState extends State<DetailsPage> {
       appBar: AppBar(
         title: Row(
           children: const [
-            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
+            Text('Universal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),

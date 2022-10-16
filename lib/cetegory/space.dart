@@ -1,6 +1,6 @@
-import 'package:first_flutter_app/details_page.dart';
-import 'package:first_flutter_app/catagory_page.dart';
-import 'package:first_flutter_app/navibar.dart';
+import 'package:first_flutter_app/allpages/details_page.dart';
+import 'package:first_flutter_app/allpages/catagory_page.dart';
+import 'package:first_flutter_app/utility/navibar.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,11 +14,11 @@ class SpacePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'new_apps',
+      title: 'uw_wallpapers',
       theme: ThemeData(
         primarySwatch: Colors.amber,
       ),
-      home: const MyHomePage(title: 'New_Apps'),
+      home: const MyHomePage(title: 'uw_wallpapers'),
     );
   }
 }
@@ -154,7 +154,7 @@ class _MyHomePageState extends State<MyHomePage> {
           
           title:Row(
           children: const [
-            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
+            Text('Universal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
@@ -200,7 +200,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   vertical: 2,
                 ),
                 decoration: const BoxDecoration(
-                  color: Colors.white,
+                  color: Colors.black,
                   borderRadius: BorderRadius.only(
                     topLeft: Radius.circular(0),
                     topRight: Radius.circular(0),

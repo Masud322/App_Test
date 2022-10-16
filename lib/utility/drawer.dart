@@ -2,22 +2,21 @@ import 'dart:ui';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'package:first_flutter_app/about_page.dart';
-import 'package:first_flutter_app/catagory_page.dart';
-import 'package:first_flutter_app/favorite.dart';
+import 'package:first_flutter_app/allpages/about_page.dart';
+import 'package:first_flutter_app/allpages/catagory_page.dart';
+import 'package:first_flutter_app/allpages/favorite.dart';
 import 'package:first_flutter_app/firebase/login.dart';
+import 'package:first_flutter_app/firebase/uplod_form.dart';
 import 'package:first_flutter_app/firebase/widget.dart';
+import 'package:first_flutter_app/allpages/home.dart';
 import 'package:first_flutter_app/main.dart';
-import 'package:first_flutter_app/privacy_page.dart';
 import 'package:first_flutter_app/firebase/signin.dart';
-import 'package:first_flutter_app/uplod_form.dart';
 import 'package:flutter/material.dart';
-import 'package:first_flutter_app/uplod_form.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp());
+  runApp(const Home_Page());
 }
 
 class AppDrawer extends StatefulWidget {
@@ -62,7 +61,7 @@ class _AppDrawerState extends State<AppDrawer> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const MyApp()),
+                MaterialPageRoute(builder: (context) => const Home_Page()),
               );
             },
           ),
@@ -91,18 +90,6 @@ class _AppDrawerState extends State<AppDrawer> {
                     builder: (context) => const Favorite_1(
                           pageId: 3,
                         )),
-              );
-            },
-          ),
-          ListTile(
-            leading: const Icon(
-              Icons.privacy_tip,
-            ),
-            title: const Text('Privacy Policy'),
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const PrivacyPage()),
               );
             },
           ),
@@ -164,7 +151,7 @@ class _AppDrawerState extends State<AppDrawer> {
                         (value) => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const MyApp()),
+                              builder: (context) => const Home_Page()),
                         ),
                       );
                   print('logout');

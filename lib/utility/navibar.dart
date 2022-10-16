@@ -1,5 +1,6 @@
-import 'package:first_flutter_app/catagory_page.dart';
-import 'package:first_flutter_app/favorite.dart';
+import 'package:first_flutter_app/allpages/catagory_page.dart';
+import 'package:first_flutter_app/allpages/favorite.dart';
+import 'package:first_flutter_app/allpages/home.dart';
 // import 'package:first_flutter_app/catagory_page.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:flutter/material.dart';
@@ -42,7 +43,7 @@ class _NaviBarState extends State<NaviBar> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => const MyApp()),
+                                  builder: (context) => const Home_Page()),
                             );
                           },
                           icon: Icon(Icons.photo_library))),

@@ -15,7 +15,7 @@ class _AboutPageState extends State<AboutPage> {
         appBar: AppBar(
           title:Row(
           children: const [
-            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
+            Text('Universal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
@@ -23,36 +23,29 @@ class _AboutPageState extends State<AboutPage> {
           ],
         ),
         ),
+        backgroundColor: Color.fromARGB(255, 138, 220, 44),
         body:
         Center(
             child: Column(
           children:[
-            const SizedBox(
-              height: 90,
-            ),
-           Container(
-            height: 120,
-            width: 300,
-            child: Image.asset('assets/images/logo.jpg',fit: BoxFit.cover,),
             
-           ),
            const SizedBox(
-            height: 100,
+            height: 260,
            ),
-            
             Container(
-              height: 100,
-              width: 250,
+              height: 140,
+              width: 270,
               padding: const EdgeInsets.all(16.0),
               margin: const EdgeInsets.only(bottom: 160),
               decoration: BoxDecoration(
-                border: Border.all(width: 3,color: Colors.black),
+                border: Border.all(width: 3,color: Colors.indigo),
               ),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children:const [
-                  Text("App Name: Universal Wallpaper"),
-                Text('App Version: 1.000'),
-                Text("Developed by Masud"),
+                  Text("App Name: Universal Wallpaper",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
+                Text('App Version: 1.000',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
+                Text("Developed by Masud",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
                 ]
                 
               ),

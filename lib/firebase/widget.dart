@@ -174,7 +174,7 @@ class _Card_PageState extends State<Card_Page> {
       child:
       Center(
         
-          child: Text('Under Developer',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
+          child: Text('Will be implemented later',style: TextStyle(fontSize: 25,fontWeight: FontWeight.bold),),
       
       ), 
       

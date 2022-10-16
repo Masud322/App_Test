@@ -1,3 +1,6 @@
+
+
+import 'package:first_flutter_app/allpages/home.dart';
 import 'package:flutter/material.dart';
 class Uplode_Form_Page extends StatefulWidget {
   const Uplode_Form_Page({super.key});
@@ -26,7 +29,7 @@ class _Uplode_Form_PageState extends State<Uplode_Form_Page> {
                   height: 20,
                 ),
                 const Padding(padding: EdgeInsets.only(right: 185),
-                child:Text('UNIVARSAL',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.indigo,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double),),),
+                child:Text('Universal',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.indigo,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double),),),
                 
                 const Text('WALLPAPERS',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.purpleAccent,fontFamily: 'Shojumaru-Regular'),),
                 const SizedBox(
@@ -93,22 +96,49 @@ class _Uplode_Form_PageState extends State<Uplode_Form_Page> {
                     Column(
                       children: [
                         Container(
-                    width: 270,
-                    padding: const EdgeInsets.all(0),
-                    child: const TextField(
-                      
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Uplode Your Image',
-                      ),
-                    ),
+                          decoration: BoxDecoration(
+                            border: Border.all(width:0.5),
+                            borderRadius:BorderRadius.all(Radius.circular(5)),
+                          ),
+                        // width: 270,
+                        // padding: const EdgeInsets.all(0),
+                        child: TextButton.icon(onPressed: (){
+
+                    }, icon: Icon(Icons.upload),
+                       label: Text('Uplode Image'))
+                    // const TextField(
+                    //   decoration: InputDecoration(
+                    // border: OutlineInputBorder(),
+                    // hintText: 'Uplode your image',
+                    // suffixIcon: Icon(Icons.upload),
+                    //   ),
+                    // ),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
                   ElevatedButton(onPressed: (){
-                    
-                  }, child: const Text('Submit'))
+
+                    setState(() {
+                      AlertDialog(
+                        content: SizedBox(
+                          child: Column(
+                            children: [
+                              Text('Thank You'),
+                              TextButton(onPressed: (){
+                                
+                                 Navigator.pushReplacement(
+                                  context, MaterialPageRoute(builder: (_) => const Home_Page()));
+
+                              }, child: Text('OK')
+                              ),
+                            ],
+                          )
+                          )
+                      );
+                    });
+
+                    }, child: const Text('Submit'))
                       ],
                     ),
                   ],

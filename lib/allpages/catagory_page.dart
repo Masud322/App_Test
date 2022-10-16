@@ -8,10 +8,11 @@ import 'package:first_flutter_app/cetegory/nature.dart';
 import 'package:first_flutter_app/cetegory/space.dart';
 import 'package:first_flutter_app/cetegory/sports.dart';
 import 'package:first_flutter_app/cetegory/travel.dart';
+import 'package:first_flutter_app/allpages/home.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:flutter/material.dart';
 
-import 'navibar.dart';
+import '../utility/navibar.dart';
 
 void main() {
   runApp(const CatagoryPage(pageId: 2));
@@ -49,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title:Row(
           children: const [
-            Text('Univarsal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
+            Text('Universal',style: TextStyle(color: Colors.indigo,fontSize: 14,fontWeight: FontWeight.bold,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double)),
             SizedBox(
               width: 5,
             ),
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MyApp()),
+              MaterialPageRoute(builder: (context) => const Home_Page()),
             );
           },
         ),
@@ -96,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const AbstractPage()),
+                MaterialPageRoute(builder: (context) =>  AbstractPage()),
               );
             },
             child: Container(

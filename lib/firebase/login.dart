@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:first_flutter_app/firebase/widget.dart';
+import 'package:first_flutter_app/allpages/home.dart';
 import 'package:first_flutter_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -9,7 +10,7 @@ import 'package:flutter_launcher_icons/xml_templates.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(const MyApp()); 
+  runApp(const Home_Page()); 
 }
 
 class Login extends StatefulWidget {
@@ -37,7 +38,7 @@ class _LoginState extends State<Login> {
           onPressed: () {
             Navigator.push(
               context,
-              MaterialPageRoute(builder: (context) => const MyApp()),
+              MaterialPageRoute(builder: (context) => const Home_Page()),
             );
           },
         ),
@@ -53,7 +54,7 @@ class _LoginState extends State<Login> {
                 height: 20,
               ),
               const Padding(padding: EdgeInsets.only(right: 185),
-              child:Text('UNIVARSAL',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.indigo,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double),),),
+              child:Text('Universal',style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold,color: Colors.indigo,fontFamily: 'Shojumaru-Regular',decoration: TextDecoration.underline,decorationThickness: 2,decorationStyle: TextDecorationStyle.double),),),
               
               const Text('WALLPAPERS',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold,color: Colors.purpleAccent,fontFamily: 'Shojumaru-Regular'),),
               const SizedBox(
@@ -108,7 +109,7 @@ class _LoginState extends State<Login> {
                   await _auth.signInWithEmailAndPassword(email: email, password: Password).then((value) =>
                   Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const MyApp()),
+                MaterialPageRoute(builder: (context) => const Home_Page()),
               ),
               
               );

@@ -8,13 +8,12 @@ class FavList{
     }else{
       favList.add(imagePath);
     }
-    print('called');
   }
 
   static Future<List<String>> getFavImgList() async {
-    print('getting list');
-    print('Total item: ');
+
     print(favList.length);
+
     return favList;
   }
 
