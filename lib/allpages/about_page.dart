@@ -23,29 +23,33 @@ class _AboutPageState extends State<AboutPage> {
           ],
         ),
         ),
-        backgroundColor: Color.fromARGB(255, 138, 220, 44),
+        backgroundColor: const Color.fromARGB(255, 138, 220, 44),
         body:
         Center(
             child: Column(
+
           children:[
-            
            const SizedBox(
-            height: 260,
+            height: 100,
+           ),
+           const CircleAvatar(backgroundImage: AssetImage("assets/images/me.jpg"),
+           radius: 60,
+           ),
+           const SizedBox(
+            height: 30,
            ),
             Container(
-              height: 140,
-              width: 270,
-              padding: const EdgeInsets.all(16.0),
-              margin: const EdgeInsets.only(bottom: 160),
-              decoration: BoxDecoration(
-                border: Border.all(width: 3,color: Colors.indigo),
-              ),
+              
+              margin: EdgeInsets.only(left: 25),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children:const [
-                  Text("App Name: Universal Wallpaper",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
-                Text('App Version: 1.000',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
-                Text("Developed by Masud",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.purple),),
+                Text("App Name: Universal Wallpaper\n",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black),),
+                Text('App Version: 1.000\n',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black),),
+                Text("Developed by Md. Masudur Rahman\n",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black),),
+                Text("Student Id: 11190120322\n",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black),),
+                Text("Email: masudurrahman5656@gmail.com",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 15,color: Colors.black),),
                 ]
                 
               ),

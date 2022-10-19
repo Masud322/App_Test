@@ -35,7 +35,7 @@ class _Uplode_Form_PageState extends State<Uplode_Form_Page> {
                 const SizedBox(
                   height: 40,
                 ),
-                const Text('Uplode Form',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.indigo),),
+                const Text('Upload Form',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold,color: Colors.indigo),),
                 const SizedBox(
                   height: 30,
                 ),
